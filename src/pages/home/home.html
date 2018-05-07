@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-slides autoplay="2000" loop="true" (ionSlideDidChange)="slideChanged()" pager>
+    <ion-slide>
+    </ion-slide>
+    <ion-slide>
+      <button class="skip-button" ion-button (click)="openSources()"> SKIP ></button>
+      <div class="news-img">
+        <img class="slide-img" src="assets/imgs/Help_1.png">
+      </div>
+      <div class="news-bottom">
+        <p class="news-bottom-header">Get World News</p>
+        <p class="news-bottom-description">
+          World news at your fingers now. Get the news from more than 100 reliable sources.
+        </p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <button class="skip-button" ion-button (click)="openSources()"> SKIP ></button>
+      <div class="news-img">
+        <img class="slide-img" src="assets/imgs/Help_2.png">
+      </div>
+      <div class="news-bottom">
+        <p class="news-bottom-header">Read Top Headlines</p>
+        <p class="news-bottom-description">
+          Stay updated to all that is going on around the world. 
+        </p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

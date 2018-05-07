@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title class="title">Choose Newspaper</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let ab of abc; let i=index" (click)="getHeadlines(ab.id,ab.name)">
+        <button class="image-button">
+     <img class="image-source"[src]="getImage(ab)">
+    <h2 class="title-source">{{ ab.name }}</h2>
+    </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

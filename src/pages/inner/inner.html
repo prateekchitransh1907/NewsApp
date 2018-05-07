@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>{{selectedObject.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-grid class="grid-class">
+    <ion-row class="slide-row">
+      <ion-slides autoplay="2000" loop="true" pager>
+        <ion-slide>
+          <div class="container">
+            <img class="slider-image" [src]="selectedObject.urlToImage">
+            <p class="news-title"> {{selectedObject.title}}</p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="container">
+            <img class="slider-image" [src]="selectedObject.urlToImage">
+            <p class="news-title"> {{selectedObject.title}}</p>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="container">
+            <img class="slider-image" [src]="selectedObject.urlToImage">
+            <p class="news-title"> {{selectedObject.title}}</p>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+    <ion-row class="details-row">
+      <ion-col col-4 style="border-right: 2px solid white;">
+        <p class="sub-titles">Author</p>
+        <p class="sub-details">{{selectedObject.author}}</p>
+      </ion-col>
+      <ion-col col-4 style="border-right: 2px solid white;">
+        <p class="sub-titles">Published Date</p>
+        <p class="sub-details">{{selectedObject.publishedAt}}</p>
+      </ion-col>
+      <ion-col col-4>
+        <p class="sub-titles">Source</p>
+        <p class="source-img"><img src="assets/imgs/Web.png"></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-label class="headline" text-wrap>
+          {{selectedObject.title}}
+        </ion-label>
+      </ion-col>
+      <ion-col col-12>
+        <p class="news-content">{{selectedObject.description}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
